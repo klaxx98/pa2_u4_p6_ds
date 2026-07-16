@@ -13,7 +13,7 @@ import uce.edu.ec.pa.domain.model.Auditoria;
 
 @Auditar
 @Interceptor
-@Priority(1)
+@Priority(2)
 @Dependent
 public class AuditoriaInterceptor {
 

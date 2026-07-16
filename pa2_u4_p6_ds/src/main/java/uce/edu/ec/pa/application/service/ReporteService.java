@@ -21,13 +21,11 @@ public class ReporteService {
     }
 
     public List<Reporte> buscarTodos() {
-        return (List<Reporte>) this.reporteRepositoryImpl.findAll();
-
+        return this.reporteRepositoryImpl.findAll().list();
     }
 
     public Reporte buscarPorId(Integer id) {
         return this.reporteRepositoryImpl.findById(id);
-
     }
 
     public void actualizar(Integer id, Reporte reporte) {
