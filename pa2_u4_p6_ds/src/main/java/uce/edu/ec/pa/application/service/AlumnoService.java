@@ -26,7 +26,7 @@ public class AlumnoService {
     }
 
     public List<Alumno> buscarTodos() {
-        return (List<Alumno>) this.alumnoRepo.findAll();
+        return this.alumnoRepo.findAll().list();
 
     }
 

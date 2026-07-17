@@ -32,9 +32,9 @@ public class Alumno extends PanacheEntityBase {
     private String facultad;
 
     @Column(name="alum_semestre")
-    private Integer semestre;
+    private String semestre;
 
-    public Alumno(Integer id, String apellido, String nombre, String cedula, String faculdad, Integer semestre) {
+    public Alumno(Integer id, String apellido, String nombre, String cedula, String faculdad, String semestre) {
         this.id = id;
         this.apellido = apellido;
         this.nombre = nombre;
@@ -97,12 +97,12 @@ public class Alumno extends PanacheEntityBase {
 
     }
 
-    public Integer getSemestre() {
+    public String getSemestre() {
         return semestre;
 
     }
 
-    public void setSemestre(Integer semestre) {
+    public void setSemestre(String semestre) {
         this.semestre = semestre;
 
     }
