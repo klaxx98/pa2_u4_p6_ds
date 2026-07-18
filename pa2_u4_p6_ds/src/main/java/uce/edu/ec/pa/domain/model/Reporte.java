@@ -1,7 +1,5 @@
 package uce.edu.ec.pa.domain.model;
 
-import java.time.LocalDateTime;
-
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -33,17 +31,12 @@ public class Reporte extends PanacheEntityBase {
     @Column(name="repo_autor")
     private String autor;
 
-    @Column(name="repo_fecha_creacion")
-    private LocalDateTime fechaCreacion;
-
-    public Reporte(Integer id, String titulo, String categoria, String texto, String autor,
-            LocalDateTime fechaCreacion) {
+    public Reporte(Integer id, String titulo, String categoria, String texto, String autor) {
         this.id = id;
         this.titulo = titulo;
         this.categoria = categoria;
         this.texto = texto;
         this.autor = autor;
-        this.fechaCreacion = fechaCreacion;
 
     }
 
@@ -101,20 +94,10 @@ public class Reporte extends PanacheEntityBase {
 
     }
 
-    public LocalDateTime getFechaCreacion() {
-        return fechaCreacion;
-
-    }
-
-    public void setFechaCreacion(LocalDateTime fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
-        
-    }
-
     @Override
     public String toString() {
         return "Reporte [id=" + id + ", titulo=" + titulo + ", categoria=" + categoria + ", texto=" + texto + ", autor="
-                + autor + ", fechaCreacion=" + fechaCreacion + "]";
+                + autor + "]";
     }
 
 }

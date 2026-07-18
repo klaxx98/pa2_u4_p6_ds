@@ -36,7 +36,6 @@ public class ReporteService {
         reporteBase.setCategoria(reporte.getCategoria());
         reporteBase.setTexto(reporte.getTexto());
         reporteBase.setAutor(reporte.getAutor());
-        reporteBase.setFechaCreacion(reporte.getFechaCreacion());
             
         this.reporteRepositoryImpl.persist(reporteBase);
 
